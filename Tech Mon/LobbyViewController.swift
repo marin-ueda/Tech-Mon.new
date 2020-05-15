@@ -57,7 +57,7 @@ class LobbyViewController: UIViewController {
         if stamina >= 50 {
             
             stamina -= 50
-            staminaLabel.text = " / 100"
+            staminaLabel.text = "\(stamina) / 100"
             performSegue(withIdentifier: "toBattle", sender: nil)
         } else {
             

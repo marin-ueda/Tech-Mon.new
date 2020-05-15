@@ -15,7 +15,7 @@ class BattleViewController: UIViewController {
     @IBOutlet var playerHPLabel: UILabel!
     @IBOutlet var playerMPLabel: UILabel!
     @IBOutlet var playerTPLabel: UILabel!
-    
+
     @IBOutlet var enemyNameLabel: UILabel!
     @IBOutlet var enemyImageView: UIImageView!
     @IBOutlet var enemyHPLabel: UILabel!
@@ -23,18 +23,17 @@ class BattleViewController: UIViewController {
     
     let techMonManager = TechMonManager.shared
     
-    var player: Character!
-    var enemy: Character!
+    var playerHP = 100
+    var playerMP = 0
+    var enemyHP = 200
+    var enemyMP = 0
+    
     var gameTimer: Timer!
     var isPlayerAttackAvailable: Bool = true
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        //キャラクターの読み込み
-        player = techMonManager.player
-        enemy = techMonManager.enemy
         
         //プレイヤーのステータスを反映
         playerNameLabel.text = "勇者"
@@ -48,10 +47,10 @@ class BattleViewController: UIViewController {
         enemyMPLabel.text = "\(enemyMP) / 35"
         
         //ゲームスタート
-        gameTimer = Timer.scheduledTimer(withTimeInterval: 0.1, target: self, selector: #selector(updateGame), userInfo: nil, repeats: true)
+        gameTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateGame), userInfo: nil, repeats: true)
+        
         gameTimer.fire()
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -64,19 +63,9 @@ class BattleViewController: UIViewController {
         super.viewWillDisappear(animated)
         techMonManager.stopBGM()
     }
-    //ステータスの反映
-    func updateUI() {
-        
-        //プレーヤーのステータスを反映
-        playerHPLabel.text = "\(player.currentHP) / \(player.maxHP)"
-        playerMPLabel.text = "\(player.currentMP) / \(player.maxMP)"
-        playerTPLabel.text = "\(player.currentTP) / \(player.maxTP)"
-        //敵のステータスを反映
-        enemyHPLabel.text = "\(enemy.currentHP) / \(enemy.maxHP)"
-        enemyMPLabel.text = "\(enemy.currentMP) / \(enemy.maxMP)"
-    }
+  
     //0.1秒ごとにゲームの状態を更新する
-    func updateGame() {
+    @objc func updateGame() {
         
         //プレイヤーのステータスを更新
         playerMP += 1
@@ -102,7 +91,7 @@ class BattleViewController: UIViewController {
     }
     
     //敵の攻撃
-    func enemyAttack(){
+    func enemyAttack() {
         
         techMonManager.damageAnimation(imageView: playerImageView)
         techMonManager.playSE(fileName: "SE_attack")
@@ -114,18 +103,6 @@ class BattleViewController: UIViewController {
         if playerHP <= 0 {
             
             finishBattle(vanishImageView: playerImageView, isPlayerWin: false)
-        }
-    }
-    
-    //勝敗判定をする
-    func judgeBattle() {
-        
-        if player.currentHP <= 0 {
-            
-            finishBattle(vanishImageView: playerImageView, isPlayerWin: false)
-        } else if enemy.currentHP <= 0 {
-            
-            finishBattle(vanishImageView: enemyImageView, isPlayerWin: true)
         }
     }
     
@@ -160,58 +137,20 @@ class BattleViewController: UIViewController {
     @IBAction func attackAction(){
         
         if isPlayerAttackAvailable {
+            
             techMonManager.damageAnimation(imageView: enemyImageView)
             techMonManager.playSE(fileName: "SE_attack")
             
-            enemy.currentHP -= player.attackPoint
+            enemyHP -= 30
+            playerMP = 0
             
-            player.currentTP += 10
-            if player.currentTP >= player.maxTP {
-                player.currentTP = player.maxTP
-            }
-            //enemyHP -= 30
-            player.currentMP = 0
-            
-           /* enemyHPLabel.text = "\(enemyHP) / 200"
+           enemyHPLabel.text = "\(enemyHP) / 200"
             playerMPLabel.text = "\(playerMP) / 20"
             
             if enemyHP <= 0 {
                 
-                finishBattle(vanishImageView: enemyImageView, isPlayerWin: true)*/
-            judgeBattle()
+                finishBattle(vanishImageView: enemyImageView, isPlayerWin: true)
             }
         }
-    @IBAction func fireAction() {
-        if isPlayerAttackAvailable && player.currentTP >= 40 {
-            
-            techMonManager.damageAnimation(imageView: enemyImageView)
-            techMonManager.playSE(fileName: "SE_fire")
-            
-            enemy.currentHP -= 100
-            
-            player.currentTP -= 40
-            if player.currentTP <= 0 {
-                
-                player.currentTP = 0
-            }
-            player.currentMP = 0
-            
-            judgeBattle()
-        }
-    }
-    
-    @IBAction func tameruAction() {
-        
-        if isPlayerAttackAvailable {
-            
-            techMonManager.playSE(fileName: "SE_charge")
-            player.currentTP += 40
-            if player.currentTP >= player.maxTP {
-                
-                player.currentTP = player.maxTP
-            }
-            player.currentMP = 0
-        }
-    }
-
+}
 }
