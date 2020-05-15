@@ -23,6 +23,9 @@ class BattleViewController: UIViewController {
     
     let techMonManager = TechMonManager.shared
     
+    var player: Character!
+    var enemy: Character!
+    
     var playerHP = 100
     var playerMP = 0
     var enemyHP = 200
@@ -35,16 +38,31 @@ class BattleViewController: UIViewController {
         
         super.viewDidLoad()
         
+        //キャラクターの読み込み
+        player = techMonManager.player
+        enemy = techMonManager.enemy
+        
         //プレイヤーのステータスを反映
         playerNameLabel.text = "勇者"
         playerImageView.image = UIImage(named: "yusya.png")
-        playerHPLabel.text = "\(playerHP) / 100"
-        playerMPLabel.text = "\(playerMP) / 20"
+       /* playerHPLabel.text = "\(playerHP) / 100"
+        playerMPLabel.text = "\(playerMP) / 20"*/
         //敵のステータスを反映
-        enemyNameLabel.text = "龍"
+        enemyNameLabel.text = "ドラゴン"
         enemyImageView.image = UIImage(named: "monster.png")
-        enemyHPLabel.text = "\(enemyHP) / 200"
-        enemyMPLabel.text = "\(enemyMP) / 35"
+       /* enemyHPLabel.text = "\(enemyHP) / 200"
+        enemyMPLabel.text = "\(enemyMP) / 35"*/
+        
+        //ステータスの反映
+        func updateUI() {
+            //プレーヤーのステータスを反映
+            playerHPLabel.text = "\(player.currentHP) / \(player.maxHP)"
+            playerMPLabel.text = "\(player.currentMP) / \(player.maxMP)"
+            playerTPLabel.text = "\(player.currentTP) / \(player.maxTP)"
+            //敵のステータスを反映
+            enemyHPLabel.text = "\(enemy.currentHP) / \(enemy.maxHP)"
+            enemyMPLabel.text = "\(enemy.currentMP) / \(enemy.maxMP)"
+        }
         
         //ゲームスタート
         gameTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateGame), userInfo: nil, repeats: true)
@@ -105,7 +123,17 @@ class BattleViewController: UIViewController {
             finishBattle(vanishImageView: playerImageView, isPlayerWin: false)
         }
     }
-    
+    //勝敗判定をする
+    func judgeBattle() {
+        
+        if player.currentHP <= 0 {
+             finishBattle(vanishImageView: playerImageView, isPlayerWin: false)
+        } else if enemy.currentHP <= 0 {
+            
+            finishBattle(vanishImageView: enemyImageView, isPlayerWin: true)
+        }
+        
+    }
     //勝利が決定した後の処理
     func finishBattle(vanishImageView: UIImageView, isPlayerWin: Bool) {
         
@@ -141,7 +169,17 @@ class BattleViewController: UIViewController {
             techMonManager.damageAnimation(imageView: enemyImageView)
             techMonManager.playSE(fileName: "SE_attack")
             
-            enemyHP -= 30
+            enemy.currentHP -= player.attackPoint
+            
+            player.currentTP += 10
+            if player.currentTP >= player.maxTP {
+                
+                player.currentTP = player.maxTP
+            }
+            player.currentMP = 0
+            
+            judgeBattle()
+           /* enemyHP -= 30
             playerMP = 0
             
            enemyHPLabel.text = "\(enemyHP) / 200"
@@ -149,8 +187,39 @@ class BattleViewController: UIViewController {
             
             if enemyHP <= 0 {
                 
-                finishBattle(vanishImageView: enemyImageView, isPlayerWin: true)
+                finishBattle(vanishImageView: enemyImageView, isPlayerWin: true)*/
             }
         }
+    @IBAction func fireAction() {
+        
+        if isPlayerAttackAvailable && player.currentTP >= 40 {
+            
+            techMonManager.damageAnimation(imageView: enemyImageView)
+            techMonManager.playSE(fileName: "SE_fire")
+            
+            enemy.currentHP -= 100
+            
+            player.currentTP -= 40
+            if player.currentTP <= 0 {
+                
+                player.currentTP = 0
+            }
+            player.currentMP = 0
+            
+            judgeBattle()
+        }
+    }
+    
+    @IBAction func tameruAction() {
+        if isPlayerAttackAvailable {
+            
+            techMonManager.playSE(fileName: "SE_charge")
+            player.currentTP += 40
+            if player.currentTP >= player.maxTP {
+                player.currentTP = player.maxTP
+            }
+            player.currentMP = 0
+        }
+    }
 }
-}
+//}
