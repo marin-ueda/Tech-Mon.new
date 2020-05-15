@@ -21,23 +21,19 @@
 		51A0AC22246E7BEE0094D740 /* lobby.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC09246E7BEE0094D740 /* lobby.png */; };
 		51A0AC23246E7BEE0094D740 /* battlebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC0A246E7BEE0094D740 /* battlebg.png */; };
 		51A0AC24246E7BEE0094D740 /* bgimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC0B246E7BEE0094D740 /* bgimage.jpg */; };
-		51A0AC25246E7BEE0094D740 /* Icon in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC0C246E7BEE0094D740 /* Icon */; };
 		51A0AC26246E7BEE0094D740 /* waku.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC0D246E7BEE0094D740 /* waku.png */; };
 		51A0AC27246E7BEE0094D740 /* gold_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC0E246E7BEE0094D740 /* gold_button.png */; };
 		51A0AC28246E7BEE0094D740 /* yusya.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC0F246E7BEE0094D740 /* yusya.png */; };
 		51A0AC29246E7BEE0094D740 /* monster.png in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC10246E7BEE0094D740 /* monster.png */; };
-		51A0AC2A246E7BEE0094D740 /* Icon in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC12246E7BEE0094D740 /* Icon */; };
 		51A0AC2B246E7BEE0094D740 /* TechMonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A0AC13246E7BEE0094D740 /* TechMonManager.swift */; };
 		51A0AC2C246E7BEE0094D740 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A0AC14246E7BEE0094D740 /* Character.swift */; };
 		51A0AC2D246E7BEE0094D740 /* SE_fanfare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC16246E7BEE0094D740 /* SE_fanfare.mp3 */; };
 		51A0AC2E246E7BEE0094D740 /* BGM_battle001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC17246E7BEE0094D740 /* BGM_battle001.mp3 */; };
-		51A0AC2F246E7BEE0094D740 /* Icon in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC18246E7BEE0094D740 /* Icon */; };
 		51A0AC30246E7BEE0094D740 /* SE_fire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC19246E7BEE0094D740 /* SE_fire.mp3 */; };
 		51A0AC31246E7BEE0094D740 /* SE_attack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC1A246E7BEE0094D740 /* SE_attack.mp3 */; };
 		51A0AC32246E7BEE0094D740 /* SE_gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC1B246E7BEE0094D740 /* SE_gameover.mp3 */; };
 		51A0AC33246E7BEE0094D740 /* SE_charge.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC1C246E7BEE0094D740 /* SE_charge.mp3 */; };
 		51A0AC34246E7BEE0094D740 /* lobby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC1D246E7BEE0094D740 /* lobby.mp3 */; };
-		51A0AC35246E7BEE0094D740 /* Icon in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC1F246E7BEE0094D740 /* Icon */; };
 		51A0AC36246E7BEE0094D740 /* misaki_gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51A0AC20246E7BEE0094D740 /* misaki_gothic.ttf */; };
 /* End PBXBuildFile section */
 
@@ -79,23 +75,19 @@
 		51A0AC09246E7BEE0094D740 /* lobby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lobby.png; sourceTree = "<group>"; };
 		51A0AC0A246E7BEE0094D740 /* battlebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = battlebg.png; sourceTree = "<group>"; };
 		51A0AC0B246E7BEE0094D740 /* bgimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bgimage.jpg; sourceTree = "<group>"; };
-		51A0AC0C246E7BEE0094D740 /* Icon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Icon"; sourceTree = "<group>"; };
 		51A0AC0D246E7BEE0094D740 /* waku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waku.png; sourceTree = "<group>"; };
 		51A0AC0E246E7BEE0094D740 /* gold_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gold_button.png; sourceTree = "<group>"; };
 		51A0AC0F246E7BEE0094D740 /* yusya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yusya.png; sourceTree = "<group>"; };
 		51A0AC10246E7BEE0094D740 /* monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster.png; sourceTree = "<group>"; };
-		51A0AC12246E7BEE0094D740 /* Icon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Icon"; sourceTree = "<group>"; };
 		51A0AC13246E7BEE0094D740 /* TechMonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechMonManager.swift; sourceTree = "<group>"; };
 		51A0AC14246E7BEE0094D740 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		51A0AC16246E7BEE0094D740 /* SE_fanfare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SE_fanfare.mp3; sourceTree = "<group>"; };
 		51A0AC17246E7BEE0094D740 /* BGM_battle001.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM_battle001.mp3; sourceTree = "<group>"; };
-		51A0AC18246E7BEE0094D740 /* Icon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Icon"; sourceTree = "<group>"; };
 		51A0AC19246E7BEE0094D740 /* SE_fire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SE_fire.mp3; sourceTree = "<group>"; };
 		51A0AC1A246E7BEE0094D740 /* SE_attack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SE_attack.mp3; sourceTree = "<group>"; };
 		51A0AC1B246E7BEE0094D740 /* SE_gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SE_gameover.mp3; sourceTree = "<group>"; };
 		51A0AC1C246E7BEE0094D740 /* SE_charge.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SE_charge.mp3; sourceTree = "<group>"; };
 		51A0AC1D246E7BEE0094D740 /* lobby.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lobby.mp3; sourceTree = "<group>"; };
-		51A0AC1F246E7BEE0094D740 /* Icon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Icon"; sourceTree = "<group>"; };
 		51A0AC20246E7BEE0094D740 /* misaki_gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = misaki_gothic.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,7 +190,6 @@
 				51A0AC09246E7BEE0094D740 /* lobby.png */,
 				51A0AC0A246E7BEE0094D740 /* battlebg.png */,
 				51A0AC0B246E7BEE0094D740 /* bgimage.jpg */,
-				51A0AC0C246E7BEE0094D740 /* Icon */,
 				51A0AC0D246E7BEE0094D740 /* waku.png */,
 				51A0AC0E246E7BEE0094D740 /* gold_button.png */,
 				51A0AC0F246E7BEE0094D740 /* yusya.png */,
@@ -210,7 +201,6 @@
 		51A0AC11246E7BEE0094D740 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				51A0AC12246E7BEE0094D740 /* Icon */,
 				51A0AC13246E7BEE0094D740 /* TechMonManager.swift */,
 				51A0AC14246E7BEE0094D740 /* Character.swift */,
 			);
@@ -222,7 +212,6 @@
 			children = (
 				51A0AC16246E7BEE0094D740 /* SE_fanfare.mp3 */,
 				51A0AC17246E7BEE0094D740 /* BGM_battle001.mp3 */,
-				51A0AC18246E7BEE0094D740 /* Icon */,
 				51A0AC19246E7BEE0094D740 /* SE_fire.mp3 */,
 				51A0AC1A246E7BEE0094D740 /* SE_attack.mp3 */,
 				51A0AC1B246E7BEE0094D740 /* SE_gameover.mp3 */,
@@ -235,7 +224,6 @@
 		51A0AC1E246E7BEE0094D740 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				51A0AC1F246E7BEE0094D740 /* Icon */,
 				51A0AC20246E7BEE0094D740 /* misaki_gothic.ttf */,
 			);
 			path = Fonts;
@@ -352,16 +340,12 @@
 				51A0AC29246E7BEE0094D740 /* monster.png in Resources */,
 				51A0AC2E246E7BEE0094D740 /* BGM_battle001.mp3 in Resources */,
 				51A0AC26246E7BEE0094D740 /* waku.png in Resources */,
-				51A0AC2A246E7BEE0094D740 /* Icon in Resources */,
 				51A0AC36246E7BEE0094D740 /* misaki_gothic.ttf in Resources */,
 				51A0AC30246E7BEE0094D740 /* SE_fire.mp3 in Resources */,
 				51A0AC27246E7BEE0094D740 /* gold_button.png in Resources */,
 				51A0AC2D246E7BEE0094D740 /* SE_fanfare.mp3 in Resources */,
-				51A0AC35246E7BEE0094D740 /* Icon in Resources */,
 				510F3D4E246C5A31008CE068 /* Assets.xcassets in Resources */,
 				51A0AC28246E7BEE0094D740 /* yusya.png in Resources */,
-				51A0AC25246E7BEE0094D740 /* Icon in Resources */,
-				51A0AC2F246E7BEE0094D740 /* Icon in Resources */,
 				510F3D4C246C5A2E008CE068 /* Main.storyboard in Resources */,
 				51A0AC31246E7BEE0094D740 /* SE_attack.mp3 in Resources */,
 				51A0AC21246E7BEE0094D740 /* Icon in Resources */,
