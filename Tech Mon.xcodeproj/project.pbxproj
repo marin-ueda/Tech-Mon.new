@@ -65,10 +65,8 @@
 		510F3D52246C5A31008CE068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		510F3D57246C5A31008CE068 /* Tech MonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tech MonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		510F3D5B246C5A31008CE068 /* Tech_MonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tech_MonTests.swift; sourceTree = "<group>"; };
-		510F3D5D246C5A31008CE068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		510F3D62246C5A31008CE068 /* Tech MonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tech MonUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		510F3D66246C5A31008CE068 /* Tech_MonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tech_MonUITests.swift; sourceTree = "<group>"; };
-		510F3D68246C5A31008CE068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		510F3E15246DB90F008CE068 /* LobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 		510F3E17246DB92C008CE068 /* BattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
 		51A0AC07246E7BEE0094D740 /* Icon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Icon"; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				510F3D5B246C5A31008CE068 /* Tech_MonTests.swift */,
-				510F3D5D246C5A31008CE068 /* Info.plist */,
 			);
 			path = "Tech MonTests";
 			sourceTree = "<group>";
@@ -166,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				510F3D66246C5A31008CE068 /* Tech_MonUITests.swift */,
-				510F3D68246C5A31008CE068 /* Info.plist */,
 			);
 			path = "Tech MonUITests";
 			sourceTree = "<group>";
